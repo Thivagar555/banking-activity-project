@@ -1,0 +1,36 @@
+<div class="card" *ngIf="!otpSent">
+  <h2>Transfer Money</h2>
+
+  <label>
+    Sender Account
+    <input [(ngModel)]="senderAccount" placeholder="Your account number" />
+  </label>
+
+  <label>
+    Receiver Account
+    <input [(ngModel)]="receiverAccount" placeholder="Receiver account number" />
+  </label>
+
+  <label>
+    Amount
+    <input type="number" [(ngModel)]="amount" />
+  </label>
+
+  <label>
+    Note (optional)
+    <input [(ngModel)]="note" />
+  </label>
+
+  <button (click)="startTransfer()">Send OTP</button>
+</div>
+
+<!-- OTP Screen -->
+<div class="card" *ngIf="otpSent">
+  <h2>Confirm Transfer</h2>
+
+  <p>Enter the OTP sent to your email</p>
+
+  <input #otp placeholder="Enter OTP" />
+
+  <button (click)="confirmTransfer(otp.value)">Confirm Transfer</button>
+</div>

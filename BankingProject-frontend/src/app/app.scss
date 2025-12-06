@@ -1,0 +1,6 @@
+:root {
+  --primary: #0b5ed7;
+  --muted: #f6f7fb;
+}
+body, html, :host { height: 100%; margin:0; font-family: Inter, Arial; background: var(--muted); }
+.container { padding: 24px; max-width: 1100px; margin: 0 auto; }

@@ -1,0 +1,11 @@
+<div class="card">
+  <h3>Transactions</h3>
+  <table>
+    <thead><tr><th>Time</th><th>Type</th><th>Amount</th><th>Balance</th></tr></thead>
+    <tbody>
+      <tr *ngFor="let t of transactions">
+        <td>{{t.time}}</td><td>{{t.type}}</td><td>₹{{t.amount}}</td><td>{{t.balanceAfter}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

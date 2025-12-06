@@ -1,0 +1,48 @@
+<div class="card">
+
+  <h2>Login</h2>
+
+  <!-- LOGIN FORM -->
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    *ngIf="!otpMode"
+  >
+    <label>
+      Email
+      <input type="email" formControlName="email" required />
+    </label>
+
+    <label>
+      Password
+      <input type="password" formControlName="password" required />
+    </label>
+
+    <label>
+      <input type="checkbox" formControlName="asAdmin" />
+      Login as admin
+    </label>
+
+    <button type="submit" class="btn btn-primary">
+      Send OTP
+    </button>
+  </form>
+
+  <!-- OTP VERIFY -->
+  <div *ngIf="otpMode">
+    <label>
+      Enter OTP
+      <input #otp />
+    </label>
+
+    <button class="btn btn-success" (click)="verifyOtp(otp.value)">
+      Verify OTP
+    </button>
+  </div>
+
+  <p>
+    Don’t have an account?
+    <a routerLink="/register">Register</a>
+  </p>
+
+</div>

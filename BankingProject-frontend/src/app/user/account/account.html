@@ -1,0 +1,11 @@
+<div class="card" *ngIf="account">
+  <h3>Account: {{account.accountNumber}}</h3>
+  <p>Balance: ₹{{account.balance}}</p>
+  <p>User: {{account.user?.name}} ({{account.user?.email}})</p>
+  <div>
+    <a routerLink="/user/deposit">Deposit</a> |
+    <a routerLink="/user/withdraw">Withdraw</a> |
+    <a routerLink="/user/transfer">Transfer</a> |
+    <a routerLink="/user/transactions">Transactions</a>
+  </div>
+</div>

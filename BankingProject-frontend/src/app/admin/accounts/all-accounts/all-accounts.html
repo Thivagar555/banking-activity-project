@@ -1,0 +1,27 @@
+<div class="card">
+  <h2>All Accounts</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Account Number</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Balance</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let a of accounts">
+        <td>{{ a.id }}</td>
+        <td>{{ a.accountNumber }}</td>
+        <td>{{ a.user.name }}</td>
+        <td>{{ a.user.email }}</td>
+        <td>₹{{ a.balance }}</td>
+        <td>{{ a.user.locked ? 'Locked' : 'Active' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

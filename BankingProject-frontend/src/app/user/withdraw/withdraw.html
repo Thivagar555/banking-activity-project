@@ -1,0 +1,15 @@
+<div class="card">
+  <h2>Withdraw Money</h2>
+
+  <label>
+    Account Number
+    <input [(ngModel)]="accountNumber" placeholder="Enter account number" />
+  </label>
+
+  <label>
+    Amount
+    <input type="number" [(ngModel)]="amount" placeholder="Enter amount" />
+  </label>
+
+  <button (click)="withdraw()">Withdraw</button>
+</div>

@@ -1,0 +1,21 @@
+.card {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+input {
+  display:block;
+  margin:8px 0;
+  padding:8px;
+  width: 100%;
+}
+
+button {
+  margin-top:10px;
+  background: var(--primary);
+  color: white;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+}

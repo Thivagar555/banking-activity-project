@@ -1,0 +1,15 @@
+<div class="card">
+  <h2>Register</h2>
+  <form (ngSubmit)="submit()">
+    <label>Name<input [formControl]="form.controls.name" required /></label>
+    <label>Email<input [formControl]="form.controls.email" required /></label>
+    <label>Password<input type="password" [formControl]="form.controls.password" required /></label>
+    <label>Role
+      <select [formControl]="form.controls.role">
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+    </label>
+    <button type="submit">Register</button>
+  </form>
+</div>

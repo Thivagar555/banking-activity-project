@@ -1,0 +1,17 @@
+<h2>Locked Users</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+
+  <tr *ngFor="let u of users">
+    <td>{{ u.name }}</td>
+    <td>{{ u.email }}</td>
+    <td>
+      <button (click)="unlock(u.id)">Unlock</button>
+    </td>
+  </tr>
+</table>
